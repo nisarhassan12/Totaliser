@@ -1,0 +1,129 @@
+/* ------------------------------------------ */
+/* ------- Totaliser App ------- */
+/* ------------------------------------------ */
+
+/* ------- Imports ------- */
+
+@import './variables';
+
+/* ------------------------------*/
+/* ----- Basic Setup ----- */
+/* ------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: $default-font-size;
+    color: $text-color;
+    box-sizing: border-box;
+}
+
+/* ------------------------------*/
+/* ----- Components ----- */
+/* ------------------------------*/
+
+.btn {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    padding: 2rem 3rem;
+    font-size: 3rem;
+    font-weight: 400;
+    color: inherit;
+    opacity: .7;
+    outline: none;
+    border: none;
+    background: $color-dark-0;
+    z-index: 1;
+    outline: none;
+}
+
+
+/* ------------------------------*/
+/* ----- Main ----- */
+/* ------------------------------*/
+
+main {
+    height: 100vh;
+    background-image: linear-gradient(rgba(rgb(2, 5, 22), .85), rgba(rgb(2, 5, 22), .85)), url('../img/adrien-olichon-763189-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ----- Totaliser ----- */
+
+.totaliser {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 390px;
+    max-height: 600px;
+    min-width: 320px;
+    border-radius: 3px;
+
+    @media (max-width: 420px) {
+        width: 100%;
+    }
+
+    &__output {
+        position: relative;
+        padding: 5rem 2rem 2rem 2rem;
+        font-weight: 400;
+        text-align: right;
+        background: $color-dark-1;
+        opacity: .85;
+        overflow: hidden;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+        .output--main {
+            font-size: 6rem;
+            font-weight: 400;
+            display: block;
+        }
+
+        .output--sub {
+            display: block;
+            margin-top: 2.5rem;
+            font-size: 2.5rem;
+            word-spacing: .5rem;
+            letter-spacing: .2rem;
+            opacity: .7;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 3%;
+            height: 5rem;
+            margin-top: -.8rem;
+        }
+
+    }
+
+    &__controlls {
+        background: $color-dark-2;
+        opacity: .95;
+        &::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+    }
+
+}
