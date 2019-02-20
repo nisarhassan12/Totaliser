@@ -4,7 +4,7 @@
 
 2 - To start the development server use 'yarn dev' or 'npm run dev'.
 
-3 - For Production build use 'yarn prod or npm run prod'. 
+3 - For Production build use 'yarn prod' or 'npm run prod'. 
 
 
 
